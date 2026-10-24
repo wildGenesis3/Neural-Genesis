@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neural Genesis — Foundational AI Architecture for the Enterprise</title>
+  <meta name="description" content="Neural Genesis delivers enterprise-grade AI architecture powering intelligent automation across HR, logistics, media, and commerce." />
+  <link rel="icon" type="image/x-icon" href="Neural_Genesis_Logo/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="Neural_Genesis_Logo/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="Neural_Genesis_Logo/apple-touch-icon.png" />
+  <link rel="manifest" href="Neural_Genesis_Logo/site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20261023v2" />
+</head>
+<body>
+
+<!-- ═══════════════════ NAV ═══════════════════ -->
+<header class="nav" id="nav">
+  <div class="nav-inner container">
+    <a href="#" class="nav-logo" id="nav-logo" aria-label="Neural Genesis Home">
+      <img src="Neural_Genesis_Logo/logo-full-color-transparent.png"
+           srcset="Neural_Genesis_Logo/logo-full-color-320w.png 320w, Neural_Genesis_Logo/logo-full-color-640w.png 640w"
+           sizes="(max-width:768px) 140px, 180px"
+           alt="Neural Genesis" width="180" height="48" />
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#products"      class="nav-link" id="nl-products">Products</a></li>
+      <li><a href="#coming-next"   class="nav-link" id="nl-next">Coming Next</a></li>
+      <li><a href="#vision"        class="nav-link" id="nl-vision">Vision</a></li>
+    </ul>
+    <div class="nav-ctas">
+      <a href="#contact" class="btn btn-outline-dark btn-sm" id="nav-signin">Explore Products</a>
+      <a href="#contact" class="btn btn-primary btn-sm" id="nav-demo">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><polygon points="5,3 13,8 5,13" fill="currentColor"/></svg>
+        Get Started
+      </a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <ul>
+    <li><a href="#products" class="mob-link" id="mn-products">Products</a></li>
+    <li><a href="#coming-next" class="mob-link" id="mn-next">Coming Next</a></li>
+    <li><a href="#vision" class="mob-link" id="mn-vision">Vision</a></li>
+  </ul>
+  <div class="mob-ctas">
+    <a href="#contact" class="btn btn-secondary w-full" id="mn-explore">Explore Products</a>
+    <a href="#contact" class="btn btn-primary w-full" id="mn-start">Get Started</a>
+  </div>
+</div>
+
+<main>
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<section class="hero-v2" id="hero" aria-labelledby="hero-h1">
+  <div class="hero-bg-grid" aria-hidden="true"></div>
+
+  <div class="container hero-v2-inner">
+    <!-- Left column -->
+    <div class="hero-v2-left">
+      <div class="hero-pill" id="hero-pill">
+        <span class="pill-dot" aria-hidden="true"></span>
+        AI Platform &mdash; General Availability
+      </div>
+      <h1 class="hero-v2-h1" id="hero-h1">
+        Practical technology.<br class="hero-br-dt" />
+        <span class="hero-h1-accent">Everyday possibilities.</span>
+      </h1>
+      <p class="hero-v2-sub">
+        From workforce management and smart logistics to automated data pipelines and operational intelligence &mdash; purpose-built products and practical AI architecture for modern enterprise workflows.
+      </p>
+      <div class="hero-v2-ctas">
+        <a href="#products" class="btn btn-primary btn-md" id="hero-cta1">
+          Explore Products
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-soft btn-md" id="hero-cta2">Watch Demo</a>
+      </div>
+      <!-- Micro stats -->
+      <div class="hero-v2-stats">
+        <div class="hstat" id="hs-1">
+          <div class="hstat-val">99.97%</div>
+          <div class="hstat-label">Uptime SLA</div>
+        </div>
+        <div class="hstat-sep" aria-hidden="true"></div>
+        <div class="hstat" id="hs-2">
+          <div class="hstat-val">12M+</div>
+          <div class="hstat-label">Daily Inferences</div>
+        </div>
+        <div class="hstat-sep" aria-hidden="true"></div>
+        <div class="hstat" id="hs-3">
+          <div class="hstat-val">4&times;</div>
+          <div class="hstat-label">Faster Deployment</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right column — UI preview panel -->
+    <div class="hero-v2-right" aria-hidden="true">
+      <div class="hero-panel" id="hero-panel">
+
+        <!-- Panel header -->
+        <div class="hp-header">
+          <div class="hp-dots">
+            <span class="hd red"></span><span class="hd amber"></span><span class="hd green"></span>
+          </div>
+          <span class="hp-title">Neural Genesis &middot; Command Center</span>
+          <div class="hp-live"><span class="pill-dot"></span> Live</div>
+        </div>
+
+        <!-- Module tiles grid -->
+        <div class="hp-body">
+          <div class="hp-tile hp-tile--blue" id="hpt-hrdeeds">
+            <div class="hpt-top">
+              <div class="hpt-icon hpt-icon--blue">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+              </div>
+              <span class="hpt-name">HRDeeds</span>
+              <span class="hpt-status hpt-status--on">Active</span>
+            </div>
+            <div class="hpt-metric">3,412 <span>events/s</span></div>
+            <div class="hpt-bar"><div class="hpt-bar-fill" style="width:82%"></div></div>
+          </div>
+
+          <div class="hp-tile hp-tile--teal" id="hpt-routepulse">
+            <div class="hpt-top">
+              <div class="hpt-icon hpt-icon--teal">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <span class="hpt-name">RoutePulse</span>
+              <span class="hpt-status hpt-status--on">Active</span>
+            </div>
+            <div class="hpt-metric">18,904 <span>routes/s</span></div>
+            <div class="hpt-bar"><div class="hpt-bar-fill hpt-bar-fill--teal" style="width:94%"></div></div>
+          </div>
+
+          <div class="hp-tile hp-tile--amber" id="hpt-stories">
+            <div class="hpt-top">
+              <div class="hpt-icon hpt-icon--amber">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>
+              </div>
+              <span class="hpt-name">Stories</span>
+              <span class="hpt-status hpt-status--on">Active</span>
+            </div>
+            <div class="hpt-metric">924 <span>renders/s</span></div>
+            <div class="hpt-bar"><div class="hpt-bar-fill hpt-bar-fill--amber" style="width:61%"></div></div>
+          </div>
+
+          <div class="hp-tile hp-tile--emerald" id="hpt-linakart">
+            <div class="hpt-top">
+              <div class="hpt-icon hpt-icon--emerald">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              </div>
+              <span class="hpt-name">LinaKart</span>
+              <span class="hpt-status hpt-status--on">Active</span>
+            </div>
+            <div class="hpt-metric">7,821 <span>txn/s</span></div>
+            <div class="hpt-bar"><div class="hpt-bar-fill hpt-bar-fill--emerald" style="width:74%"></div></div>
+          </div>
+
+          <!-- Mini sparkline -->
+          <div class="hp-chart" id="hp-chart">
+            <div class="hp-chart-label">Platform Throughput &middot; 24h</div>
+            <svg viewBox="0 0 320 60" preserveAspectRatio="none" class="hp-svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="hg1" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#10BDF4" stop-opacity="0.25"/>
+                  <stop offset="100%" stop-color="#10BDF4" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path d="M0,48 C20,42 40,50 60,38 C80,26 100,44 120,30 C140,16 160,34 180,20 C200,6 220,22 240,14 C260,6 280,18 320,8" fill="none" stroke="#10BDF4" stroke-width="1.5" class="hp-sparkline"/>
+              <path d="M0,48 C20,42 40,50 60,38 C80,26 100,44 120,30 C140,16 160,34 180,20 C200,6 220,22 240,14 C260,6 280,18 320,8 L320,60 L0,60Z" fill="url(#hg1)"/>
+            </svg>
+          </div>
+
+          <!-- Log line -->
+          <div class="hp-log" id="hp-log">
+            <div class="hlog-line"><span class="hlog-ts">15:42:09</span><span class="hlog-tag hlog-tag--blue">HRDeeds</span><span class="hlog-msg">Candidate scored 94.2%</span></div>
+            <div class="hlog-line"><span class="hlog-ts">15:42:10</span><span class="hlog-tag hlog-tag--teal">RoutePulse</span><span class="hlog-msg">Route optimized: BOM&rarr;DEL</span></div>
+            <div class="hlog-line"><span class="hlog-ts">15:42:11</span><span class="hlog-tag hlog-tag--emerald">LinaKart</span><span class="hlog-msg">+14.3% CVR uplift detected</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════ PRODUCTS ═══════════════════ -->
+<section class="section products-v2" id="products" aria-labelledby="prod-h2">
+  <div class="container">
+    <div class="sect-label">Products</div>
+    <h2 class="sect-h2" id="prod-h2">Explore our products</h2>
+    <p class="sect-sub">Purpose-built for the way people work, discover, and connect.</p>
+
+    <div class="prod-grid" id="prod-grid">
+
+      <!-- HRDeeds -->
+      <article class="prod-card" id="pc-hrdeeds" aria-labelledby="pc-hrdeeds-title">
+        <div class="pc-accent pc-accent--blue" aria-hidden="true"></div>
+        <div class="pc-header">
+          <div class="pc-meta">
+            <span class="pc-category pc-category--blue">HR &amp; WORKFORCE MANAGEMENT</span>
+            <span class="pc-meta-sub">Our HRMS platform</span>
+          </div>
+          <h3 class="pc-title" id="pc-hrdeeds-title">HRDeeds</h3>
+          <p class="pc-desc">Bring employee management, attendance, leave, payroll, and reimbursements into one connected workspace.</p>
+          <div class="pc-tags">
+            <span class="pc-tag-pill">Attendance &amp; Leave</span>
+            <span class="pc-tag-pill">Payroll &amp; Reimbursements</span>
+            <span class="pc-tag-pill">Teams &amp; Branches</span>
+          </div>
+        </div>
+
+        <!-- HRDeeds UI mock -->
+        <div class="pc-ui-mock pc-ui-mock--hrdeeds" aria-hidden="true">
+          <div class="mock-hr-header">
+            <div class="mock-hr-status">
+              <span class="mock-dot-live"></span>
+              <span class="mock-hr-hq">Headquarters &mdash; Shift Active</span>
+            </div>
+            <span class="mock-badge-present">142 Present</span>
+          </div>
+          <div class="mock-hr-list">
+            <div class="mock-hr-row">
+              <div class="mock-avatar">SC</div>
+              <div class="mock-hr-user">
+                <span class="mock-hr-name">S. Chatterjee</span>
+                <span class="mock-hr-time">08:58 AM &middot; In</span>
+              </div>
+              <span class="mock-pill-tag">Biometric</span>
+            </div>
+            <div class="mock-hr-row">
+              <div class="mock-avatar">AL</div>
+              <div class="mock-hr-user">
+                <span class="mock-hr-name">A. Leonard</span>
+                <span class="mock-hr-time">09:04 AM &middot; In</span>
+              </div>
+              <span class="mock-pill-tag">Geo-fence</span>
+            </div>
+          </div>
+          <div class="mock-hr-footer">
+            <span class="mock-hr-batch-label">Recent Expense Batch</span>
+            <span class="mock-hr-approved">$14,850 Approved</span>
+          </div>
+        </div>
+
+        <div class="pc-footer">
+          <a href="#contact" class="pc-link" id="pc-cta-hrdeeds">
+            Explore HRDeeds
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- RoutePulse -->
+      <article class="prod-card" id="pc-routepulse" aria-labelledby="pc-routepulse-title">
+        <div class="pc-accent pc-accent--teal" aria-hidden="true"></div>
+        <div class="pc-header">
+          <div class="pc-meta">
+            <span class="pc-category pc-category--cyan">FIELD OPERATIONS</span>
+            <span class="pc-meta-sub">A field-team companion to HRDeeds</span>
+          </div>
+          <h3 class="pc-title" id="pc-routepulse-title">RoutePulse</h3>
+          <p class="pc-desc">Coordinate field teams with route tracking, customer visits, day plans, and travel reimbursement workflows.</p>
+          <div class="pc-tags">
+            <span class="pc-tag-pill">Routes &amp; Visits</span>
+            <span class="pc-tag-pill">Day Planning</span>
+            <span class="pc-tag-pill">Travel Claims</span>
+          </div>
+        </div>
+
+        <!-- RoutePulse UI mock -->
+        <div class="pc-ui-mock pc-ui-mock--routepulse" aria-hidden="true">
+          <div class="mock-rp-header">
+            <div class="mock-rp-corridor">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+              <span class="mock-rp-title">Route #4 &mdash; West Corridor</span>
+            </div>
+            <span class="mock-rp-logged">42.5 km logged</span>
+          </div>
+          <div class="mock-rp-steps">
+            <div class="mock-rp-step">
+              <span class="mock-step-num mock-step-num--done">1</span>
+              <span class="mock-rp-name">Metro Mart Hub &middot; Inventory Restock</span>
+              <span class="mock-badge-done">Done</span>
+            </div>
+            <div class="mock-rp-step">
+              <span class="mock-step-num mock-step-num--prog">2</span>
+              <span class="mock-rp-name">Apex Retailers &middot; Client Audit</span>
+              <span class="mock-badge-prog">In Progress</span>
+            </div>
+          </div>
+          <div class="mock-rp-footer">
+            <span class="mock-rp-auto">Auto-mileage calculation active</span>
+            <span class="mock-rp-claim">Claim: <strong>$68.00 Pending</strong></span>
+          </div>
+        </div>
+
+        <div class="pc-footer">
+          <a href="#contact" class="pc-link" id="pc-cta-routepulse">
+            Explore RoutePulse
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Stories -->
+      <article class="prod-card" id="pc-stories" aria-labelledby="pc-stories-title">
+        <div class="pc-accent pc-accent--indigo" aria-hidden="true"></div>
+        <div class="pc-header">
+          <div class="pc-meta">
+            <span class="pc-category pc-category--lavender">STORIES &amp; READING</span>
+            <span class="pc-meta-sub">vyaasartha.com</span>
+          </div>
+          <h3 class="pc-title" id="pc-stories-title">Stories</h3>
+          <p class="pc-desc">A dedicated destination for stories and reading.</p>
+          <div class="pc-tags">
+            <span class="pc-tag-pill">Stories</span>
+            <span class="pc-tag-pill">Reading</span>
+            <span class="pc-tag-pill">Discovery</span>
+          </div>
+        </div>
+
+        <!-- Stories UI mock -->
+        <div class="pc-ui-mock pc-ui-mock--stories" aria-hidden="true">
+          <div class="mock-st-header">
+            <span class="mock-st-eyebrow">FEATURED SELECTION</span>
+            <span class="mock-st-read">7 min read</span>
+          </div>
+          <h4 class="mock-st-art-title">The Artisan's Silence</h4>
+          <p class="mock-st-quote">&ldquo;Along the river embankment where kiln smoke merges with morning mist, there lies a workshop that preserves the ancient rhythm of wheel and earth...&rdquo;</p>
+          <div class="mock-st-footer">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <span>An essay on craft, heritage, and quiet persistence</span>
+          </div>
+        </div>
+
+        <div class="pc-footer">
+          <a href="https://vyaasartha.com" target="_blank" rel="noopener" class="pc-link" id="pc-cta-stories">
+            Visit Stories
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- LinaKart -->
+      <article class="prod-card" id="pc-linakart" aria-labelledby="pc-linakart-title">
+        <div class="pc-accent pc-accent--emerald" aria-hidden="true"></div>
+        <div class="pc-header">
+          <div class="pc-meta">
+            <span class="pc-category pc-category--emerald">LOCAL COMMERCE</span>
+            <span class="pc-meta-sub">linakart.com</span>
+          </div>
+          <h3 class="pc-title" id="pc-linakart-title">LinaKart</h3>
+          <p class="pc-desc">Buy and sell local products, discover services, and find nearby work opportunities in one marketplace.</p>
+          <div class="pc-tags">
+            <span class="pc-tag-pill">Buy &amp; Sell</span>
+            <span class="pc-tag-pill">Local Services</span>
+            <span class="pc-tag-pill">Nearby Work</span>
+          </div>
+        </div>
+
+        <!-- LinaKart UI mock -->
+        <div class="pc-ui-mock pc-ui-mock--linakart" aria-hidden="true">
+          <div class="mock-lk-split">
+            <div class="mock-lk-col">
+              <span class="mock-lk-badge-p">PRODUCT</span>
+              <div class="mock-lk-item-name">Raw Wild Honey</div>
+              <div class="mock-lk-item-sub">
+                <span class="mock-lk-price">$16.50</span>
+                <span class="mock-lk-dist">0.5 mi</span>
+              </div>
+            </div>
+            <div class="mock-lk-col">
+              <span class="mock-lk-badge-w">LOCAL WORK</span>
+              <div class="mock-lk-item-name">Store Assistant</div>
+              <div class="mock-lk-item-sub">
+                <span class="mock-lk-imm">Immediate</span>
+                <span class="mock-lk-dist">Today</span>
+              </div>
+            </div>
+          </div>
+          <div class="mock-lk-footer">
+            <div class="mock-lk-service">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#0284C7" stroke="none"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              <span class="mock-lk-serv-name">Certified Electrician</span>
+            </div>
+            <span class="mock-lk-serv-status">0.8 mi away &middot; Available</span>
+          </div>
+        </div>
+
+        <div class="pc-footer">
+          <a href="https://linakart.com" target="_blank" rel="noopener" class="pc-link" id="pc-cta-linakart">
+            Visit LinaKart
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ COMING NEXT (WHAT WE'RE BUILDING NEXT) ═══════════════════ -->
+<section class="section coming-next" id="coming-next" aria-labelledby="cn-h2">
+  <div class="container">
+    <div class="cn-badge-wrap">
+      <span class="cn-badge-bar" aria-hidden="true"></span>
+      <span class="cn-badge-text">IN DEVELOPMENT</span>
+    </div>
+    <h2 class="sect-h2 cn-h2" id="cn-h2">What we&rsquo;re building next</h2>
+    <p class="sect-sub">New ideas for simpler data workflows, operational visibility, and focused learning.</p>
+
+    <div class="cn-grid" id="cn-grid">
+
+      <!-- ETL Lite -->
+      <div class="cn-card" id="cn-etl">
+        <div class="cn-top-meta">
+          <span class="cn-pill-upcoming"><span class="cn-dot-blue"></span>Upcoming</span>
+          <span class="cn-meta-cat">Data Tools</span>
+        </div>
+        <h3 class="cn-title">ETL Lite</h3>
+        <p class="cn-desc">A lightweight approach to extracting, transforming, and loading data for everyday workflows.</p>
+        <!-- Pipeline preview -->
+        <div class="cn-preview-etl" aria-hidden="true">
+          <div class="etl-stage">
+            <span class="etl-title etl-title--blue">Postgres/CSV</span>
+            <span class="etl-sub">Source</span>
+          </div>
+          <div class="etl-stage">
+            <span class="etl-title etl-title--blue">Filter &amp; Map</span>
+            <span class="etl-sub">Transform</span>
+          </div>
+          <div class="etl-stage">
+            <span class="etl-title etl-title--teal">Warehouse/API</span>
+            <span class="etl-sub">Dest</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Operational CCTV -->
+      <div class="cn-card" id="cn-cctv">
+        <div class="cn-top-meta">
+          <span class="cn-pill-upcoming"><span class="cn-dot-blue"></span>Upcoming</span>
+          <span class="cn-meta-cat">Operational Visibility</span>
+        </div>
+        <h3 class="cn-title">Operational CCTV</h3>
+        <p class="cn-desc">A CCTV-based system designed to support monitoring and day-to-day operational oversight.</p>
+        <!-- 2x2 CCTV Feeds -->
+        <div class="cn-preview-cctv" aria-hidden="true">
+          <div class="cctv-tile">
+            <div class="cctv-top">
+              <span class="cctv-cam">CAM 01</span>
+              <span class="cctv-dot"></span>
+            </div>
+            <div class="cctv-label">Loading Bay N</div>
+          </div>
+          <div class="cctv-tile">
+            <div class="cctv-top">
+              <span class="cctv-cam">CAM 02</span>
+              <span class="cctv-dot"></span>
+            </div>
+            <div class="cctv-label">Floor 2 Assembly</div>
+          </div>
+          <div class="cctv-tile">
+            <div class="cctv-top">
+              <span class="cctv-cam">CAM 03</span>
+              <span class="cctv-dot"></span>
+            </div>
+            <div class="cctv-label">Warehouse Gate A</div>
+          </div>
+          <div class="cctv-tile">
+            <div class="cctv-top">
+              <span class="cctv-cam">CAM 04</span>
+              <span class="cctv-dot"></span>
+            </div>
+            <div class="cctv-label">Dispatch Staging</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Competitive Exam Prep -->
+      <div class="cn-card" id="cn-exam">
+        <div class="cn-top-meta">
+          <span class="cn-pill-upcoming"><span class="cn-dot-blue"></span>Upcoming</span>
+          <span class="cn-meta-cat">Learning &amp; Practice</span>
+        </div>
+        <h3 class="cn-title">Competitive Exam Prep</h3>
+        <p class="cn-desc">A planned learning app for competitive exam preparation, question practice, and mock tests.</p>
+        <!-- Quiz mock -->
+        <div class="cn-preview-exam" aria-hidden="true">
+          <div class="exam-header">
+            <span class="exam-badge">Quantitative Aptitude</span>
+            <span class="exam-progress">18/25 Completed</span>
+          </div>
+          <div class="exam-question">Logical Deduction: Sequence validation</div>
+          <div class="exam-options">
+            <div class="exam-opt exam-opt--selected">
+              <span class="exam-radio exam-radio--active"></span>
+              <span class="exam-opt-text">Option A (Selected)</span>
+            </div>
+            <div class="exam-opt">
+              <span class="exam-radio"></span>
+              <span class="exam-opt-text">Option B</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ TECHNOLOGY VISION (OUR GROWING EXPERTISE) ═══════════════════ -->
+<section class="section vision-section" id="vision" aria-labelledby="tv-h2">
+  <div class="container">
+    <div class="tv-pill-wrap">
+      <span class="tv-pill-dot" aria-hidden="true"></span>
+      <span class="tv-pill-text">TECHNOLOGY VISION</span>
+    </div>
+    <h2 class="sect-h2 tv-h2" id="tv-h2">From Automation to Intelligent Digital Solutions</h2>
+    <p class="tv-sub">
+      Neural Genesis is growing across the technology landscape&mdash;from industrial and home automation to software development, IT services, and innovative digital products. We aim to bring practical, thoughtfully designed solutions to businesses, homes, and everyday life.
+    </p>
+
+    <!-- Subheader: Expertise & Process stages -->
+    <div class="tv-subbar">
+      <div class="tv-expertise-title">
+        <span class="tv-bar" aria-hidden="true"></span>
+        <span>OUR GROWING EXPERTISE</span>
+      </div>
+      <div class="tv-breadcrumbs" aria-label="Expertise path">
+        <span class="tv-bc tv-bc--cyan">Physical Automation</span>
+        <span class="tv-bc-arrow" aria-hidden="true">&rarr;</span>
+        <span class="tv-bc tv-bc--blue">Software Services</span>
+        <span class="tv-bc-arrow" aria-hidden="true">&rarr;</span>
+        <span class="tv-bc tv-bc--cyan">Digital Products</span>
+      </div>
+    </div>
+
+    <!-- 4 Cards Grid -->
+    <div class="tv-grid" id="tv-grid">
+
+      <!-- Card 1: Industrial Automation -->
+      <div class="tv-card" id="tvc-industrial">
+        <div class="tvc-accent tvc-accent--cyan" aria-hidden="true"></div>
+        <div class="tvc-body">
+          <div class="tvc-icon tvc-icon--cyan" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 20h8"/>
+              <path d="M6 20v-3l4-5 5 2 3-6"/>
+              <circle cx="10" cy="12" r="1.5" fill="#0284C7"/>
+              <circle cx="15" cy="14" r="1.5" fill="#0284C7"/>
+              <path d="M18 8l3-2"/>
+              <path d="M19 10l2 1"/>
+            </svg>
+          </div>
+          <span class="tvc-stage tvc-stage--cyan">STAGE 01 &middot; SYSTEMS</span>
+          <h3 class="tvc-title">Industrial Automation</h3>
+          <p class="tvc-desc">Exploring smarter ways to streamline industrial processes and improve operational efficiency.</p>
+          <div class="tvc-footer">
+            <span class="tvc-footer-label">Sensors &amp; Control</span>
+            <span class="tvc-arrow" aria-hidden="true">&rarr;</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Home Automation -->
+      <div class="tv-card" id="tvc-home">
+        <div class="tvc-accent tvc-accent--teal" aria-hidden="true"></div>
+        <div class="tvc-body">
+          <div class="tvc-icon tvc-icon--cyan" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 3H5a2 2 0 0 0-2 2v2"/>
+              <path d="M17 3h2a2 2 0 0 1 2 2v2"/>
+              <path d="M7 21H5a2 2 0 0 1-2-2v-2"/>
+              <path d="M17 21h2a2 2 0 0 0 2-2v-2"/>
+              <circle cx="12" cy="10" r="2.5"/>
+              <path d="M8 17a4 4 0 0 1 8 0"/>
+            </svg>
+          </div>
+          <span class="tvc-stage tvc-stage--cyan">STAGE 02 &middot; SPACES</span>
+          <h3 class="tvc-title">Home Automation</h3>
+          <p class="tvc-desc">Bringing convenience, connectivity, and intelligent control into everyday living spaces.</p>
+          <div class="tvc-footer">
+            <span class="tvc-footer-label">Ambient &amp; IoT</span>
+            <span class="tvc-arrow" aria-hidden="true">&rarr;</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Software & IT Services -->
+      <div class="tv-card" id="tvc-software">
+        <div class="tvc-accent tvc-accent--blue" aria-hidden="true"></div>
+        <div class="tvc-body">
+          <div class="tvc-icon tvc-icon--blue" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="16" rx="3"/>
+              <path d="M7 9l3 3-3 3"/>
+              <line x1="12" y1="15" x2="16" y2="15"/>
+            </svg>
+          </div>
+          <span class="tvc-stage tvc-stage--lavender">STAGE 03 &middot; ARCHITECTURE</span>
+          <h3 class="tvc-title">Software &amp; IT Services</h3>
+          <p class="tvc-desc">Developing practical software solutions and technology services for evolving business needs.</p>
+          <div class="tvc-footer">
+            <span class="tvc-footer-label">Enterprise &amp; Cloud</span>
+            <span class="tvc-arrow" aria-hidden="true">&rarr;</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4: Product Development -->
+      <div class="tv-card" id="tvc-product">
+        <div class="tvc-accent tvc-accent--purple" aria-hidden="true"></div>
+        <div class="tvc-body">
+          <div class="tvc-icon tvc-icon--purple" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4338CA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+              <polyline points="2 12 12 17 22 12"/>
+              <polyline points="2 17 12 22 22 17"/>
+            </svg>
+          </div>
+          <span class="tvc-stage tvc-stage--lavender">STAGE 04 &middot; SOLUTIONS</span>
+          <h3 class="tvc-title">Product Development</h3>
+          <p class="tvc-desc">Creating purposeful digital products that solve real-world problems and simplify everyday experiences.</p>
+          <div class="tvc-footer">
+            <span class="tvc-footer-label">Apps &amp; Ecosystem</span>
+            <span class="tvc-arrow" aria-hidden="true">&rarr;</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ DARK CTA ═══════════════════ -->
+<section class="dark-cta" id="contact" aria-labelledby="cta-h2">
+  <div class="dark-cta-grid" aria-hidden="true"></div>
+  <div class="dark-cta-orb" aria-hidden="true"></div>
+  <div class="container dark-cta-inner">
+    <div class="dark-cta-brandmark" aria-hidden="true">
+      <img src="Neural_Genesis_Logo/brand-mark-transparent.png" alt="" width="56" height="56" />
+    </div>
+    <h2 class="dark-cta-h2" id="cta-h2">Find the product that fits<br />your world.</h2>
+    <p class="dark-cta-sub">Talk to our team, explore pricing, and understand how we can uniquely support your workflow.</p>
+    <form class="dark-cta-form" id="cta-form" action="#" method="post" novalidate>
+      <div class="dcf-row">
+        <div class="dcf-group" id="dcf-name">
+          <label for="cname" class="dcf-label">Full Name</label>
+          <input type="text" id="cname" name="name" class="dcf-input" placeholder="Your name" autocomplete="name" required />
+        </div>
+        <div class="dcf-group" id="dcf-email">
+          <label for="cemail" class="dcf-label">Work Email</label>
+          <input type="email" id="cemail" name="email" class="dcf-input" placeholder="you@company.com" autocomplete="email" required />
+        </div>
+        <div class="dcf-group" id="dcf-product">
+          <label for="cproduct" class="dcf-label">Primary Interest</label>
+          <select id="cproduct" name="product" class="dcf-input dcf-select">
+            <option value="">Choose a product...</option>
+            <option value="hrdeeds">HRDeeds</option>
+            <option value="routepulse">RoutePulse</option>
+            <option value="stories">Stories</option>
+            <option value="linakart">LinaKart</option>
+            <option value="platform">Full Platform</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary-dark btn-lg" id="dcf-submit">
+        Request a Demo
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="dcf-status" id="dcf-status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer class="site-footer" id="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand" id="footer-brand">
+      <img src="Neural_Genesis_Logo/logo-navy.png" alt="Neural Genesis" class="footer-logo" width="140" height="36" />
+      <p class="footer-tag">Foundational AI architecture<br/>for the modern enterprise.</p>
+    </div>
+    <nav class="footer-cols" aria-label="Footer navigation">
+      <div class="fcol" id="fc-products">
+        <div class="fcol-title">Products</div>
+        <ul>
+          <li><a href="#products" class="fcol-link" id="ft-hrdeeds">HRDeeds</a></li>
+          <li><a href="#products" class="fcol-link" id="ft-routepulse">RoutePulse</a></li>
+          <li><a href="#products" class="fcol-link" id="ft-stories">Stories</a></li>
+          <li><a href="#products" class="fcol-link" id="ft-linakart">LinaKart</a></li>
+        </ul>
+      </div>
+      <div class="fcol" id="fc-platform">
+        <div class="fcol-title">Platform</div>
+        <ul>
+          <li><a href="#vision" class="fcol-link" id="ft-platform">Technology Vision</a></li>
+          <li><a href="#coming-next" class="fcol-link" id="ft-roadmap">Roadmap</a></li>
+          <li><a href="#contact" class="fcol-link" id="ft-api">API Docs</a></li>
+          <li><a href="#contact" class="fcol-link" id="ft-status">Status</a></li>
+        </ul>
+      </div>
+      <div class="fcol" id="fc-company">
+        <div class="fcol-title">Company</div>
+        <ul>
+          <li><a href="#vision" class="fcol-link" id="ft-about">Our Vision</a></li>
+          <li><a href="#contact" class="fcol-link" id="ft-careers">Careers</a></li>
+          <li><a href="#contact" class="fcol-link" id="ft-blog">Blog</a></li>
+          <li><a href="#contact" class="fcol-link" id="ft-contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="fcol" id="fc-legal">
+        <div class="fcol-title">Legal</div>
+        <ul>
+          <li><a href="#" class="fcol-link" id="ft-privacy">Privacy</a></li>
+          <li><a href="#" class="fcol-link" id="ft-terms">Terms</a></li>
+          <li><a href="#" class="fcol-link" id="ft-security">Security</a></li>
+          <li><a href="#" class="fcol-link" id="ft-compliance">Compliance</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-btm-inner">
+      <p class="footer-copy">&copy; 2026 Neural Genesis Technologies Pvt. Ltd. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>
