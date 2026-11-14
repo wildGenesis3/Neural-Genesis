@@ -1,0 +1,141 @@
+/* Responsive corrections stay isolated from the desktop presentation. */
+@media (max-width: 1024px) {
+  .hero-inner > *, .section-heading > *, .product-info, .product-title,
+  .ecosystem-story > div, .contact-layout > *, .form-field { min-width: 0; }
+
+  .roadmap .roadmap-item summary {
+    display: grid;
+    grid-template-columns: 24px minmax(0, 1fr) 36px;
+    column-gap: 12px;
+    row-gap: 9px;
+    padding: 22px 0;
+  }
+  .roadmap .roadmap-number { grid-column: 1; grid-row: 1; width: auto; align-self: start; padding-top: 4px; }
+  .roadmap .roadmap-item summary h3 { grid-column: 2; grid-row: 1; min-width: 0; line-height: 1.4; overflow-wrap: anywhere; }
+  .roadmap .roadmap-category { display: none; }
+  .roadmap .roadmap-status { grid-column: 2; grid-row: 2; font-size: 10px; min-width: 0; }
+  .roadmap .details-plus {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    place-items: center;
+    margin: 0;
+    width: 22px;
+    height: 22px;
+    line-height: 1;
+  }
+  .roadmap-content { padding-left: 36px; }
+  .roadmap-home-content { padding-left: 0; }
+  .form-field input, .form-field textarea, .form-field select { font-size: 16px; min-height: 48px; }
+}
+
+@media (max-width: 650px) {
+  .container { width: calc(100% - 36px); }
+  .hero-copy .eyebrow { font-size: 8px; letter-spacing: 1px; line-height: 1.7; }
+  .hero h1 { font-size: clamp(47px, 12vw, 74px); letter-spacing: -.055em; overflow-wrap: normal; }
+  .hero-copy > p { font-size: 14px; line-height: 1.8; max-width: 100%; }
+  .hero-actions { flex-wrap: wrap; gap: 12px 18px; }
+  .hero-actions .button { min-height: 48px; font-size: 12px; padding: 13px 17px; }
+  .hero-actions .text-link { min-height: 44px; font-size: 12px; }
+  .hero-footnote { font-size: 7px; letter-spacing: .65px; line-height: 1.7; }
+  .menu-toggle { width: 44px; height: 44px; flex-shrink: 0; }
+  .mobile-menu { max-height: calc(100dvh - 74px); overflow-y: auto; overscroll-behavior: contain; }
+  .mobile-menu a { min-height: 48px; }
+  .section-heading > p { font-size: 13px; line-height: 1.8; }
+  .product-title { align-items: flex-start; }
+  .product-title h3 { font-size: clamp(21px, 6vw, 27px); line-height: 1.3; overflow-wrap: anywhere; }
+  .product-symbol { flex-shrink: 0; }
+  .product-info > p { font-size: 14px; line-height: 1.8; }
+  .product-footer { min-height: 56px; font-size: 12px; }
+  .product-footer > span:first-child { min-width: 0; }
+  .product-footer .circle-arrow { flex-shrink: 0; margin-left: 12px; }
+  .product-footer .link-domain { display: none; }
+
+  .ecosystem-controls { flex-wrap: wrap; gap: 4px 12px; }
+  .ecosystem-steps { min-width: 150px; }
+  .ecosystem-step, .ecosystem-motion { min-height: 44px; font-size: 10px; }
+  .ecosystem-step { min-width: 0; }
+  .ecosystem-story { padding-bottom: 16px; }
+  .ecosystem-story h3 { font-size: 16px; line-height: 1.4; }
+  .ecosystem-story p { font-size: 12px; line-height: 1.65; }
+  .ecosystem-story > div > span { font-size: 8px; line-height: 1.6; }
+  .ecosystem-topline { font-size: 7px; line-height: 1.6; }
+  .ecosystem-node { padding: 10px 9px; }
+  .node-heading { display: grid; grid-template-columns: minmax(0, 1fr) 14px; gap: 6px; }
+  .node-heading .node-symbol { grid-column: 1; grid-row: 1; }
+  .node-heading strong { grid-column: 1 / -1; grid-row: 2; font-size: 12px; line-height: 1.3; overflow-wrap: anywhere; }
+  .node-arrow { grid-column: 2; grid-row: 1; }
+  .node-description { font-size: 7px; line-height: 1.5; }
+  .ecosystem-perspective { height: 385px; }
+  .ecosystem-node { min-height: 128px; }
+  .node-meter, .node-route-line, .node-story-lines, .node-commerce { margin-top: 7px; }
+
+  .product-grid > .product-card > .product-demo {
+    display: grid;
+    grid-template-rows: 30px minmax(220px, 1fr) auto auto;
+    height: 400px;
+  }
+  .demo-stage { height: auto; min-height: 220px; }
+  .demo-kicker { font-size: 6px; letter-spacing: .8px; padding-inline: 13px; }
+  .demo-kicker > span:last-child { font-size: 5px; letter-spacing: .3px; }
+  .demo-narrative { padding: 13px 13px 14px; min-height: 82px; }
+  .demo-narrative strong { display: block; font-size: 12px; line-height: 1.5; }
+  .demo-narrative p { font-size: 11px; line-height: 1.7; }
+  .demo-steps { position: relative; min-height: 48px; }
+  .demo-steps button { min-width: 0; min-height: 48px; white-space: normal; font-size: 10px; line-height: 1.4; padding: 8px 5px; }
+  .demo-steps button > span { display: none; }
+
+  .roadmap .roadmap-item summary h3 { font-size: 17px; }
+  .roadmap-content > p, .roadmap-home-copy p { font-size: 13px; line-height: 1.8; }
+  .roadmap-content .text-link { font-size: 12px; min-height: 44px; line-height: 1.6; }
+  .roadmap-note { font-size: 10px; line-height: 1.8; }
+  .home-scene-controls { gap: 6px; padding-inline: 8px; }
+  .home-scene-controls button { min-height: 44px; font-size: 11px; padding: 8px 10px; white-space: normal; }
+  .home-demo-note { font-size: 9px; }
+  .home-scene-label { font-size: 8px; }
+  .contact-copy > p { font-size: 14px; }
+  .contact-signoff { font-size: 11px; line-height: 1.6; }
+  .contact .eyebrow { font-size: 8px; line-height: 1.8; }
+  .form-row { grid-template-columns: 1fr; gap: 0; }
+  .form-field label { font-size: 12px; }
+  .form-note { font-size: 10px; line-height: 1.8; }
+  .form-status { font-size: 13px; }
+  .contact-form .button { min-height: 50px; }
+  .footer-top nav { flex-wrap: wrap; justify-content: flex-start; gap: 4px 23px; font-size: 12px; }
+  .footer-top nav a { display: inline-flex; align-items: center; min-height: 44px; }
+  .footer-bottom { font-size: 9px; line-height: 1.6; }
+  .footer-bottom > a { font-size: 8px; min-height: 44px; display: inline-flex; align-items: center; }
+}
+
+@media (max-width: 400px) {
+  .hero-actions .button, .hero-actions .text-link { width: 100%; justify-content: center; }
+  .product-top, .product-info { padding-inline: 18px; }
+  .product-preview { margin-inline: 18px; }
+  .product-footer { padding-inline: 18px; }
+  .demo-kicker > span:last-child { display: none; }
+  .hero-location { font-size: 6px; letter-spacing: .3px; }
+  .ecosystem-topline > span:last-child { font-size: 6px; }
+}
+
+/* Tablets and landscape phones retain the desktop composition with touch-safe controls. */
+@media (pointer: coarse) {
+  .ecosystem-step, .ecosystem-motion, .demo-steps button, .home-scene-controls button { min-height: 44px; }
+  .desktop-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  .nav-contact { min-height: 44px; }
+  .form-field input, .form-field textarea, .form-field select { font-size: 16px; min-height: 48px; }
+  .home-scene-controls button { padding-block: 10px; }
+}
+
+@media (pointer: coarse) and (min-width: 651px) and (max-width: 1024px) {
+  .ecosystem-step, .ecosystem-motion { font-size: 10px; }
+  .demo-steps button { font-size: 10px; }
+  .demo-steps button > span { display: none; }
+  .home-scene-controls button { font-size: 11px; }
+  .roadmap-home-content .home-demo { height: 365px; }
+}
+
+@media (pointer: coarse) and (min-width: 651px) and (max-width: 900px) {
+  .hero h1 { font-size: clamp(51px, 7.3vw, 65px); }
+}

@@ -11,8 +11,12 @@ yarn-error.log*
 
 # Firebase cache
 .firebase/
+firebase-debug*.log
 
 # OS metadata
 .DS_Store
 Thumbs.db
+
+# Local browser verification artifacts
+.browser-qa/
 
