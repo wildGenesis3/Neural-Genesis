@@ -19,4 +19,5 @@ Thumbs.db
 
 # Local browser verification artifacts
 .browser-qa/
+dist/
 

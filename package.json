@@ -4,6 +4,7 @@
   "description": "Neural Genesis official website with SMTP email receiver backend",
   "main": "server.js",
   "scripts": {
+    "build": "node build-static.cjs",
     "start": "node server.js",
     "dev": "node --watch server.js"
   },

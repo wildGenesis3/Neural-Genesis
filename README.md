@@ -46,6 +46,8 @@ Google Fonts is the only external visual dependency; local system fonts provide 
 
 ## Contact
 
+Firebase deploys only the generated `dist/` frontend folder. Its predeploy hook runs `npm run build`, which copies an explicit list of website assets. Local browser profiles, Git metadata, `.env`, logs, Node dependencies, and server files are outside that publish folder.
+
 FormSubmit and the public submission form have been removed. The site displays `wildgenesis3@gmail.com` and a direct `mailto:` link. Product inquiry links populate the email subject. The visitor sends their message through their own email app; the website does not submit, store, or claim to deliver messages. No third-party form service or SMTP configuration is required for this contact flow.
 
 The legacy SMTP endpoint in `server.js` is unused by the frontend. Do not use it as evidence that the public site sends email.
