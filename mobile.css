@@ -334,3 +334,11 @@
   }
   .node-heading { display:grid; grid-template-columns:24px minmax(0,1fr); align-items:center; gap:7px; }
 }
+
+@media (max-width:650px), (pointer:coarse) and (max-width:1024px) {
+  .footer-top { text-align:center; }
+  .footer-top .brand.brand-official { margin-inline:auto; }
+  .footer-top nav { justify-content:center; }
+  .footer-bottom { align-items:center; text-align:center; }
+  .footer-bottom>a { justify-content:center; }
+}
