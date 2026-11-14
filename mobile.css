@@ -305,11 +305,14 @@
 @media (max-width:650px), (pointer:coarse) and (max-width:1024px) {
   .hero h1,
   .section-heading h2,
-  .contact h2,
-  .contact-direct h3,
-  .product-title h3,
-  .roadmap .roadmap-item summary h3 {
+  .contact h2 {
     text-align:center;
+  }
+  .hero-copy>p,
+  .contact-copy>p {
+    text-align:center;
+    max-width:34rem;
+    margin-inline:auto;
   }
   .hero-copy>.eyebrow,
   .section-heading .eyebrow,
@@ -317,8 +320,17 @@
     justify-content:center;
     text-align:center;
   }
-  .product-title { justify-content:center; }
-  .node-index { text-align:center; }
-  .node-heading { display:flex; align-items:center; justify-content:center; gap:7px; }
-  .node-heading strong { text-align:center; }
+  .ecosystem-topline { justify-content:center; text-align:center; }
+  .product-title { justify-content:flex-start; }
+  .product-title h3,
+  .product-info>p,
+  .roadmap .roadmap-item summary h3,
+  .roadmap-content,
+  .contact-direct h3,
+  .contact-direct>p,
+  .node-index,
+  .node-heading strong {
+    text-align:left;
+  }
+  .node-heading { display:grid; grid-template-columns:24px minmax(0,1fr); align-items:center; gap:7px; }
 }
