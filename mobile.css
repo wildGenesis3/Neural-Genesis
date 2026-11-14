@@ -301,3 +301,24 @@
   .footer-bottom>span:nth-child(2) { display:none; }
   .footer-bottom>a { min-height:44px; display:inline-flex; align-items:center; }
 }
+
+@media (max-width:650px), (pointer:coarse) and (max-width:1024px) {
+  .hero h1,
+  .section-heading h2,
+  .contact h2,
+  .contact-direct h3,
+  .product-title h3,
+  .roadmap .roadmap-item summary h3 {
+    text-align:center;
+  }
+  .hero-copy>.eyebrow,
+  .section-heading .eyebrow,
+  .contact-copy>.eyebrow {
+    justify-content:center;
+    text-align:center;
+  }
+  .product-title { justify-content:center; }
+  .node-index { text-align:center; }
+  .node-heading { display:flex; align-items:center; justify-content:center; gap:7px; }
+  .node-heading strong { text-align:center; }
+}
