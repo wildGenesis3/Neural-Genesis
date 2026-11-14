@@ -54,7 +54,9 @@ The legacy SMTP endpoint in `server.js` is unused by the frontend. Do not use it
 
 ## Phone layout
 
-On screens up to 650px, the desktop 3D ecosystem becomes a simple two-column product directory. Product cards show readable descriptions, feature labels, and direct links instead of reduced miniature scenes. The roadmap starts collapsed, and the contact area uses a direct email action. Desktop 3D scenes remain available above the phone breakpoint.
+On screens up to 650px, and touch devices up to 1024px, the desktop 3D ecosystem becomes a simple two-column product directory. Product cards show readable descriptions, feature labels, and direct links instead of reduced miniature scenes. The roadmap starts collapsed, and the contact area uses a direct email action. Desktop 3D scenes remain available on larger screens and mouse-driven desktop layouts.
+
+The alignment pass verifies equal tile rows, aligned name baselines, consistent card and menu gutters, and navigation in both orientations across 16 phone/tablet viewport combinations. Its release excludes the paused SMTP implementation.
 
 ## Verification
 

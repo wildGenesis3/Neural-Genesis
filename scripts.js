@@ -19,7 +19,7 @@ document.addEventListener('keydown', event => {
   if (event.key === 'Escape' && !mobileMenu.hidden) { closeMenu(); menuToggle.focus(); }
 });
 document.addEventListener('click', event => { if (!document.getElementById('nav').contains(event.target)) closeMenu(); });
-window.matchMedia('(min-width: 651px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
+window.matchMedia('(min-width: 1025px), (min-width: 651px) and (pointer: fine)').addEventListener('change', event => { if (event.matches) closeMenu(); });
 document.getElementById('year').textContent = new Date().getFullYear();
 
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -49,6 +49,6 @@ document.querySelectorAll('[data-interest]').forEach(link => {
 });
 
 // The phone layout begins with a concise roadmap; each project can be expanded.
-if (window.matchMedia('(max-width: 650px)').matches) {
+if (window.matchMedia('(max-width: 650px), (max-width: 1024px) and (pointer: coarse)').matches) {
   document.querySelectorAll('.roadmap-item').forEach(item => { item.open = false; });
 }
