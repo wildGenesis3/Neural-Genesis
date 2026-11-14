@@ -40,46 +40,15 @@ if ('IntersectionObserver' in window) {
   document.querySelectorAll('#products, #coming-next').forEach(section => navObserver.observe(section));
 }
 
-// Product inquiries carry their context through to the hosted contact form.
+// Keep the inquiry context when a visitor opens their email app.
 document.querySelectorAll('[data-interest]').forEach(link => {
-  link.addEventListener('click', () => { document.getElementById('cproduct').value = link.dataset.interest; });
-});
-const contactForm = document.getElementById('contact-form');
-contactForm.addEventListener('submit', event => {
-  const form = event.currentTarget;
-  const button = document.getElementById('submit-contact');
-  const status = document.getElementById('form-status');
-  if (form.dataset.submitting === 'true') {
-    event.preventDefault();
-    return;
-  }
-  ['cname', 'cemail', 'cmessage'].forEach(id => {
-    const input = document.getElementById(id);
-    input.value = input.value.trim();
+  link.addEventListener('click', () => {
+    const subject = 'Neural Genesis inquiry — ' + link.dataset.interest;
+    document.querySelector('.email-action').href = 'mailto:wildgenesis3@gmail.com?subject=' + encodeURIComponent(subject);
   });
-  if (!form.checkValidity()) {
-    event.preventDefault();
-    status.textContent = 'Please enter your name and email address.';
-    status.className = 'form-status error';
-    form.reportValidity();
-    return;
-  }
-  // Use a normal POST so FormSubmit can show its CAPTCHA and delivery result.
-  // Do not show success here: the provider must first accept the submission.
-  form.dataset.submitting = 'true';
-  button.disabled = true;
-  button.querySelector('span').textContent = 'Opening verification…';
-  status.textContent = 'Continue with the security check to send your inquiry.';
-  status.className = 'form-status';
 });
 
-// Restore the form if a visitor returns from verification using browser Back.
-window.addEventListener('pageshow', () => {
-  delete contactForm.dataset.submitting;
-  const button = document.getElementById('submit-contact');
-  button.disabled = false;
-  button.querySelector('span').textContent = 'Start a conversation';
-  const status = document.getElementById('form-status');
-  status.textContent = '';
-  status.className = 'form-status';
-});
+// The phone layout begins with a concise roadmap; each project can be expanded.
+if (window.matchMedia('(max-width: 650px)').matches) {
+  document.querySelectorAll('.roadmap-item').forEach(item => { item.open = false; });
+}

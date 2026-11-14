@@ -44,17 +44,15 @@ Open **http://localhost:3000**. Use `npm run dev` for server watch mode. No fron
 
 Google Fonts is the only external visual dependency; local system fonts provide fallbacks. The product ecosystem uses the existing brand mark and local HTML/CSS/SVG visuals, without third-party model or image requests.
 
-## Contact delivery and hosting
+## Contact
 
-The public contact form sends a standard HTTPS POST directly to `https://formsubmit.co/wildgenesis3@gmail.com`. It works on static Firebase Hosting without a deployed Node backend, SMTP credentials, or a paid email API. Fields include the visitor's name, email, selected product, and message. A hidden subject and table template format the notification; FormSubmit uses the visitor's email for replies.
+FormSubmit and the public submission form have been removed. The site displays `wildgenesis3@gmail.com` and a direct `mailto:` link. Product inquiry links populate the email subject. The visitor sends their message through their own email app; the website does not submit, store, or claim to deliver messages. No third-party form service or SMTP configuration is required for this contact flow.
 
-FormSubmit's CAPTCHA remains enabled, with an additional honeypot field. A valid submission navigates to FormSubmit for verification and its result page. The website does not claim delivery before FormSubmit accepts it, and the form still works without JavaScript. Returning with the browser's Back button restores the submit control.
+The legacy SMTP endpoint in `server.js` is unused by the frontend. Do not use it as evidence that the public site sends email.
 
-**One-time activation:** submit an inquiry from the served website and confirm the activation message in `wildgenesis3@gmail.com` (check spam too). Complete activation before relying on production delivery. FormSubmit can provide an opaque endpoint after activation, which can replace the address in the form action. No real email or activation submission was sent during implementation.
+## Phone layout
 
-The existing `server.js` SMTP endpoint remains available for legacy use but is no longer called by the website form. Static-only Firebase hosting does not run that server. Its SMTP settings are optional for local/legacy use and must stay private in `.env`.
-
-Provider references: [setup and activation](https://formsubmit.co/) and [form options, CAPTCHA, and honeypot](https://formsubmit.co/documentation). Form submissions pass through this third-party provider.
+On screens up to 650px, the desktop 3D ecosystem becomes a simple two-column product directory. Product cards show readable descriptions, feature labels, and direct links instead of reduced miniature scenes. The roadmap starts collapsed, and the contact area uses a direct email action. Desktop 3D scenes remain available above the phone breakpoint.
 
 ## Verification
 
