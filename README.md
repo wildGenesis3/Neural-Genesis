@@ -1,6 +1,6 @@
 # Neural Genesis
 
-A responsive, motion-led website for Neural Genesis Technologies, showcasing HRDeeds, RoutePulse, Vyaasartha Stories, LinaKart, Home Automation Applications, and the upcoming product roadmap.
+A responsive, motion-led website for Neural Genesis Private Limited, showcasing HRDeeds, RoutePulse, Vyaasartha Stories, LinaKart, Home Automation Applications, and the upcoming product roadmap.
 
 ## Run locally
 
@@ -24,6 +24,8 @@ Open **http://localhost:3000**. Use `npm run dev` for server watch mode. No fron
 - Four featured products. HRDeeds and LinaKart have user-directed 3D explanations: choose check-in/people/payroll or local products/services/work to bring the relevant object forward and update the explanation. These are illustrative workflows, not live product sessions.
 - Home Automation Applications is the fourth item in the upcoming product roadmap. Its expandable row includes an illustrative room with Evening, Away, and Good night scene controls and a contextual contact link. Scene controls only change the illustration.
 - Header and footer show a dark-surface logo lockup built from two unmodified files in `Neural_Genesis_Logo/`: the colour mark (`brand-mark-transparent.png`) beside the white wordmark (`logo-white.png`, clipped to the wordmark). Both share the same 325px height, so they line up exactly; no white box behind the logo.
+- An Our story section (`#about`): industrial automation for pharma cleanrooms since 2019 ([neuralindustrialautomation.com](https://neuralindustrialautomation.com)), then home automation ([neuralhomeautomation.in](https://neuralhomeautomation.in)), then Neural Genesis as a software company (incorporated 2026). No founder details by choice.
+- Company details: registered office in the contact card; registered office, CIN and TAN in the footer; the same address and CIN in the Organization JSON-LD.
 - Scroll reveals, mobile navigation, expandable roadmap, and contextual product inquiries.
 - Keyboard focus indicators, a skip link, pause controls, and reduced-motion support. Reduced-motion layouts do not pin the hero or respond to pointer movement.
 - Perspective rendering runs only while values change and stops offscreen or when the browser tab is hidden. The scene uses CSS 3D transforms, with no WebGL dependency.
@@ -39,6 +41,7 @@ Open **http://localhost:3000**. Use `npm run dev` for server watch mode. No fron
 | `product-scenes.css` | Official brand presentation, 3D product objects, responsive home illustration |
 | `product-scenes.js` | Product workflow steps and illustrative home scene controls |
 | `mobile.css` | Phone/tablet layout, readable forms, touch targets, and roadmap wrapping |
+| `about.css` | Our story section, registered office in the contact card, footer legal line |
 | `refinements.css` | Loaded last: dark-surface logo lockup and larger, brighter labels (no interface text under 9px; most labels 10–13px) |
 | `robots.txt`, `sitemap.xml` | Search engine files, published with the site |
 | `assets/og-image.jpg` | 1200×630 link preview image (WhatsApp, LinkedIn, X), made from the official logo files |
@@ -51,7 +54,7 @@ Google Fonts is the only external visual dependency; local system fonts provide 
 
 Firebase deploys only the generated `dist/` frontend folder. Its predeploy hook runs `npm run build`, which copies an explicit list of website assets. Local browser profiles, Git metadata, `.env`, logs, Node dependencies, and server files are outside that publish folder.
 
-FormSubmit and the public submission form have been removed. The site displays `wildgenesis3@gmail.com` and a direct `mailto:` link. Product inquiry links populate the email subject. The visitor sends their message through their own email app; the website does not submit, store, or claim to deliver messages. No third-party form service or SMTP configuration is required for this contact flow.
+FormSubmit and the public submission form have been removed. The site displays `info@neuralgenesis.in` and a direct `mailto:` link. Product inquiry links populate the email subject. The visitor sends their message through their own email app; the website does not submit, store, or claim to deliver messages. No third-party form service or SMTP configuration is required for this contact flow.
 
 The legacy SMTP endpoint in `server.js` is unused by the frontend. Do not use it as evidence that the public site sends email.
 
@@ -75,4 +78,4 @@ Product references: [HRDeeds](https://hrdeeds.com/) for workforce administration
 
 ## Sharing and search
 
-`index.html` carries a canonical URL, Open Graph and Twitter card tags, and Organization structured data (JSON-LD), all pointing at `https://neuralgenesis.web.app/`. If the site moves to a custom domain, update those URLs, `robots.txt` and `sitemap.xml` together.
+`index.html` carries a canonical URL, Open Graph and Twitter card tags, and Organization structured data (JSON-LD), all pointing at `https://neuralgenesis.in/`. If the domain changes, update those URLs, `robots.txt` and `sitemap.xml` together.

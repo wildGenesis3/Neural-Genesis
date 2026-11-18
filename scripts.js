@@ -44,7 +44,7 @@ if ('IntersectionObserver' in window) {
 document.querySelectorAll('[data-interest]').forEach(link => {
   link.addEventListener('click', () => {
     const subject = 'Neural Genesis inquiry — ' + link.dataset.interest;
-    document.querySelector('.email-action').href = 'mailto:wildgenesis3@gmail.com?subject=' + encodeURIComponent(subject);
+    document.querySelector('.email-action').href = 'mailto:info@neuralgenesis.in?subject=' + encodeURIComponent(subject);
   });
 });
 
