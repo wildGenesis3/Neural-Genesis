@@ -1,0 +1,103 @@
+@charset "UTF-8";
+/*
+  Refinements: loaded last, after mobile.css.
+  1. Dark-surface logo lockup: the official colour mark beside the official
+     white wordmark. Both images come from Neural_Genesis_Logo/ unmodified and
+     share the same 325px height, so the mark lines up with the wordmark.
+  2. Readable labels: no UI text below 9px on phones or 10px on larger screens,
+     with brighter greys. Miniature text inside the decorative 3D objects
+     (phone, payslip, map, book) is left as illustration.
+*/
+
+/* 1. Logo lockup */
+.brand.brand-lockup {
+  position:relative;
+  display:block;
+  height:auto;
+  aspect-ratio:1234/325;
+  padding:0;
+  background:none;
+  border:0;
+  border-radius:0;
+}
+.nav .brand.brand-lockup { width:184px; height:auto; padding:0; }
+.footer-top .brand.brand-lockup { width:200px; height:auto; padding:0; }
+.brand.brand-lockup img {
+  position:absolute;
+  top:0;
+  left:0;
+  width:auto;
+  height:100%;
+  max-height:none;
+}
+.brand.brand-lockup .lockup-mark { width:33.96%; }
+.brand.brand-lockup .lockup-word { width:100%; clip-path:inset(0 0 0 35%); }
+
+/* 2. Readable labels, tablet and desktop */
+@media (min-width:651px) {
+  .eyebrow { font-size:11px; letter-spacing:1.6px; color:#c3cad8; }
+  .contact .eyebrow { font-size:11px; }
+  .hero-bottom { font-size:11px; color:#8a94a8; }
+  .scroll-cue, .hero-location { font-size:11px; letter-spacing:1.2px; }
+
+  .ecosystem-topline { font-size:10px; color:#97a8c4; }
+  .ecosystem-instruction { font-size:10px; letter-spacing:1.2px; color:#7d91b2; margin-top:16px; }
+  .node-index { font-size:9px; }
+  .node-description { font-size:10px; color:#a3b0c5; }
+  .ecosystem-story>div>span { font-size:10px; letter-spacing:1.4px; }
+  .ecosystem-story p { font-size:13px; color:#93a3bd; }
+  .ecosystem-count>span { font-size:10px; color:#7b8dab; }
+  .ecosystem-step { font-size:11px; color:#6d82a2; }
+  .ecosystem-motion { font-size:11px; }
+
+  .capability-strip>.container>span { font-size:12px; }
+  .product-category { font-size:10px; letter-spacing:1.4px; color:#b3c3dc; }
+  .product-number { font-size:12px; color:#7a859a; }
+  .small-badge { font-size:9px; }
+  .link-domain { font-size:12px; color:#95a1b6; }
+
+  .demo-kicker { font-size:9px; }
+  .demo-kicker>span:last-child { font-size:9px; color:#8592a6; }
+  .demo-narrative strong { font-size:15px; }
+  .demo-narrative p { font-size:12px; color:#91a3bd; }
+  .demo-steps button { font-size:12px; color:#8a9bb3; }
+  .demo-steps button>span { font-size:10px; }
+  .map-tag { font-size:11px; }
+  .map-label, .story-side { font-size:9px; }
+  .home-scene-label { font-size:11px; }
+  .home-scene-controls button { font-size:12px; }
+  .home-demo-note { font-size:12px; color:#86a2a0; }
+
+  .roadmap-category { font-size:10px; color:#95a1b5; }
+  .roadmap-status { font-size:12px; }
+  .pipeline small { font-size:10px; }
+  .roadmap-note { font-size:12px; color:#95a2b7; }
+
+  .contact-direct-label { font-size:11px; }
+  .contact-direct-note { font-size:12px; }
+
+  .footer-top>p { font-size:13px; color:#95a2b6; }
+  .footer-top nav { font-size:13px; color:#b5bfd0; }
+  .footer-bottom, .footer-bottom>a { font-size:11px; color:#97a3b8; }
+}
+
+/* 2. Readable labels, phones */
+@media (max-width:650px) {
+  .hero-copy .eyebrow, .eyebrow { font-size:10px; letter-spacing:1px; }
+  .ecosystem-topline { font-size:10px; }
+  .node-description { font-size:11px; }
+  .product-category { font-size:10px; }
+  .product-number { font-size:11px; }
+  .roadmap-category { font-size:10px; }
+  .roadmap .roadmap-status { font-size:11px; }
+  .roadmap-note { font-size:11px; }
+  .contact-direct-label { font-size:10px; }
+  .footer-bottom { font-size:11px; }
+  .nav .brand.brand-lockup { width:160px; }
+  .footer-top .brand.brand-lockup { width:170px; }
+}
+
+/* Keep the hero hint on one line in the narrower two-column layout */
+@media (min-width:651px) and (max-width:1050px) {
+  .ecosystem-instruction { font-size:9px; letter-spacing:.6px; white-space:nowrap; }
+}

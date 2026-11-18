@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://neuralgenesis.web.app/sitemap.xml

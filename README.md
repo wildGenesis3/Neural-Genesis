@@ -23,7 +23,7 @@ Open **http://localhost:3000**. Use `npm run dev` for server watch mode. No fron
 - Dark navy surfaces, cobalt accents, Geist typography, and editorial serif details.
 - Four featured products. HRDeeds and LinaKart have user-directed 3D explanations: choose check-in/people/payroll or local products/services/work to bring the relevant object forward and update the explanation. These are illustrative workflows, not live product sessions.
 - Home Automation Applications is the fourth item in the upcoming product roadmap. Its expandable row includes an illustrative room with Evening, Away, and Good night scene controls and a contextual contact link. Scene controls only change the illustration.
-- Header and footer use the unmodified full-color Neural Genesis logo from `Neural_Genesis_Logo/`, displayed on a light surface so its navy wordmark stays readable.
+- Header and footer show a dark-surface logo lockup built from two unmodified files in `Neural_Genesis_Logo/`: the colour mark (`brand-mark-transparent.png`) beside the white wordmark (`logo-white.png`, clipped to the wordmark). Both share the same 325px height, so they line up exactly; no white box behind the logo.
 - Scroll reveals, mobile navigation, expandable roadmap, and contextual product inquiries.
 - Keyboard focus indicators, a skip link, pause controls, and reduced-motion support. Reduced-motion layouts do not pin the hero or respond to pointer movement.
 - Perspective rendering runs only while values change and stops offscreen or when the browser tab is hidden. The scene uses CSS 3D transforms, with no WebGL dependency.
@@ -39,6 +39,9 @@ Open **http://localhost:3000**. Use `npm run dev` for server watch mode. No fron
 | `product-scenes.css` | Official brand presentation, 3D product objects, responsive home illustration |
 | `product-scenes.js` | Product workflow steps and illustrative home scene controls |
 | `mobile.css` | Phone/tablet layout, readable forms, touch targets, and roadmap wrapping |
+| `refinements.css` | Loaded last: dark-surface logo lockup and larger, brighter labels (no interface text under 9px; most labels 10–13px) |
+| `robots.txt`, `sitemap.xml` | Search engine files, published with the site |
+| `assets/og-image.jpg` | 1200×630 link preview image (WhatsApp, LinkedIn, X), made from the official logo files |
 | `server.js` | Existing Express server and Nodemailer contact endpoint |
 | `Neural_Genesis_Logo/` | Existing branding and favicons |
 
@@ -69,3 +72,7 @@ Mobile verification additionally covers 14 portrait/landscape viewport combinati
 The motion direction was informed by [MotionSites](https://motionsites.org/motion): interactive 3D heroes, subtle motion, and layered compositions. The implementation, product ecosystem, and product previews are original to this project.
 
 Product references: [HRDeeds](https://hrdeeds.com/) for workforce administration, GPS/photo attendance, payroll, and reimbursements; [LinaKart](https://linakart.com/) for local buying/selling, services, and nearby work. The existing local logos are used in their product cards and hero nodes. Vyaasartha could not be retrieved during this revision; its established reading theme and RoutePulse's repository-supplied field operations scope were retained without adding new claims. The previous approach/vision section has been removed, including its navigation links.
+
+## Sharing and search
+
+`index.html` carries a canonical URL, Open Graph and Twitter card tags, and Organization structured data (JSON-LD), all pointing at `https://neuralgenesis.web.app/`. If the site moves to a custom domain, update those URLs, `robots.txt` and `sitemap.xml` together.
