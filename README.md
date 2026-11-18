@@ -16,6 +16,22 @@ npm start
 
 Open **http://localhost:3000**. Use `npm run dev` for server watch mode. No frontend build is required.
 
+## Pages
+
+Five pages share one header and footer. Each lives in its own folder so URLs stay clean; Express (`npm start`) and Firebase (`trailingSlash: true`) both serve `folder/index.html`.
+
+| URL | File | What's on it |
+| --- | --- | --- |
+| `/` | `index.html` | 3D product ecosystem hero, product cards with App Store / Google Play buttons, What's next teaser, story teaser, contact band |
+| `/products/` | `products/index.html` | The four products with their interactive scenes and store buttons |
+| `/whats-next/` | `whats-next/index.html` | Coming next: SalesDeeds (CRM), Enterprise Deeds (ERP). In the lab: ETLite, Govt Exams Agentic AI, Home Automation Apps, Operational CCTV |
+| `/our-story/` | `our-story/index.html` | Industrial automation → home automation → Neural Genesis |
+| `/contact/` | `contact/index.html` | Email, registered office. `?interest=RoutePulse` pre-fills the email subject |
+
+**Header and footer:** edit `partials/header.html` or `partials/footer.html`, then run `npm run layout`. It copies them into every page between the `@header` / `@footer` markers and marks the current page's links (`aria-current="page"`, from `<body data-page>`). `npm run build` runs it first.
+
+**Store links:** HRDeeds is on the [App Store](https://apps.apple.com/in/app/hrdeeds/id6831963812) and [Google Play](https://play.google.com/store/apps/details?id=com.hrdeeds.mobile); RoutePulse is on the [App Store](https://apps.apple.com/in/app/hrd-routepulse/id6831964568). RoutePulse's Google Play listing (`com.hrdeeds.routepulse`) isn't public yet, so its Play button shows "Coming soon"; when it goes live, replace that `span.store-button.is-soon` with a link on the Home and Products pages.
+
 ## Experience
 
 - A 3D product ecosystem centered on the Neural Genesis brand, with HRDeeds, RoutePulse, Stories, and LinaKart on separate floating planes. The diagram represents the product family, rather than claiming software integrations.
@@ -34,7 +50,9 @@ Open **http://localhost:3000**. Use `npm run dev` for server watch mode. No fron
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Content, product showcases, roadmap, contact form |
+| `index.html`, `*/index.html` | The five pages (see Pages) |
+| `partials/`, `layout.cjs` | Shared header and footer, and the script that copies them into every page |
+| `pages.css` | Page headers, current-page nav, store buttons, home teasers, What's next cards, contact page |
 | `styles.css` | Design tokens, responsive layouts, visual effects |
 | `scripts.js` | Navigation, reveals, form handling |
 | `ecosystem.js` | Pointer perspective, scroll chapters, product selection, motion controls |

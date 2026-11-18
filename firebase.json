@@ -1,6 +1,7 @@
 {
   "hosting": {
     "public": "dist",
+    "trailingSlash": true,
     "predeploy": ["npm run build"],
     "ignore": [
       "firebase.json",
@@ -11,7 +12,9 @@
       "package.json",
       "package-lock.json",
       "DESIGN.md",
-      "README.md"
+      "README.md",
+      "partials/**",
+      "layout.cjs"
     ],
     "rewrites": [
       {

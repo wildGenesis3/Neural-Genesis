@@ -20,7 +20,8 @@ document.addEventListener('keydown', event => {
 });
 document.addEventListener('click', event => { if (!document.getElementById('nav').contains(event.target)) closeMenu(); });
 window.matchMedia('(min-width: 1025px), (min-width: 651px) and (pointer: fine)').addEventListener('change', event => { if (event.matches) closeMenu(); });
-document.getElementById('year').textContent = new Date().getFullYear();
+const year = document.getElementById('year');
+if (year) year.textContent = new Date().getFullYear();
 
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 if ('IntersectionObserver' in window) {
@@ -31,22 +32,18 @@ if ('IntersectionObserver' in window) {
   }, { threshold: 0.08 });
   document.querySelectorAll('.reveal').forEach(element => revealObserver.observe(element));
   document.documentElement.classList.add('js-motion');
-  const navObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      const link = document.querySelector(`.desktop-nav a[href="#${entry.target.id}"]`);
-      if (link) link.classList.toggle('active', entry.isIntersecting);
-    });
-  }, { rootMargin: '-15% 0px -50% 0px' });
-  document.querySelectorAll('#products, #coming-next').forEach(section => navObserver.observe(section));
 }
 
-// Keep the inquiry context when a visitor opens their email app.
-document.querySelectorAll('[data-interest]').forEach(link => {
-  link.addEventListener('click', () => {
-    const subject = 'Neural Genesis inquiry — ' + link.dataset.interest;
-    document.querySelector('.email-action').href = 'mailto:info@neuralgenesis.in?subject=' + encodeURIComponent(subject);
-  });
-});
+// Contact page: product links arrive as /contact/?interest=RoutePulse. Carry that
+// into the email subject so the visitor's message keeps its context.
+const emailAction = document.querySelector('.email-action');
+const interest = new URLSearchParams(location.search).get('interest');
+if (emailAction && interest) {
+  const topic = interest.slice(0, 60);
+  emailAction.href = 'mailto:info@neuralgenesis.in?subject=' + encodeURIComponent('Neural Genesis inquiry — ' + topic);
+  const note = document.getElementById('contact-interest');
+  if (note) { note.textContent = 'Your email will be about: ' + topic; note.hidden = false; }
+}
 
 // The phone layout begins with a concise roadmap; each project can be expanded.
 if (window.matchMedia('(max-width: 650px), (max-width: 1024px) and (pointer: coarse)').matches) {

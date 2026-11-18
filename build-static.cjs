@@ -5,9 +5,14 @@ const path = require('node:path');
 
 // Publish an explicit set of frontend assets, never the working directory.
 const output = path.join(__dirname, 'dist');
-const files = ['index.html', 'styles.css', 'mobile.css', 'product-scenes.css', 'refinements.css', 'about.css', 'scripts.js', 'ecosystem.js', 'product-scenes.js', 'robots.txt', 'sitemap.xml'];
+// Pages live in folders so URLs stay clean (/products/, /contact/ ...).
+require('./layout.cjs');
+const files = ['index.html', 'products/index.html', 'whats-next/index.html', 'our-story/index.html', 'contact/index.html', 'pages.css', 'styles.css', 'mobile.css', 'product-scenes.css', 'refinements.css', 'about.css', 'scripts.js', 'ecosystem.js', 'product-scenes.js', 'robots.txt', 'sitemap.xml'];
 fs.mkdirSync(output, { recursive: true });
-for (const file of files) fs.copyFileSync(path.join(__dirname, file), path.join(output, file));
+for (const file of files) {
+  fs.mkdirSync(path.dirname(path.join(output, file)), { recursive: true });
+  fs.copyFileSync(path.join(__dirname, file), path.join(output, file));
+}
 for (const directory of ['assets', 'Neural_Genesis_Logo']) {
   fs.cpSync(path.join(__dirname, directory), path.join(output, directory), {
     recursive: true,
