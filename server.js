@@ -12,6 +12,25 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Short or guessed page URLs go to the real page. Keep in step with
+// "redirects" in firebase.json.
+const PAGE_ALIASES = {
+  '/product': '/products/',
+  '/our-products': '/products/',
+  '/about': '/our-story/',
+  '/about-us': '/our-story/',
+  '/story': '/our-story/',
+  '/upcoming': '/whats-next/',
+  '/roadmap': '/whats-next/',
+  '/contact-us': '/contact/'
+};
+app.use((req, res, next) => {
+  const target = PAGE_ALIASES[req.path.replace(/\/$/, '')];
+  if (!target) return next();
+  const query = req.originalUrl.slice(req.path.length);
+  res.redirect(301, target + query);
+});
+
 // Serve static frontend files
 app.use(express.static(path.join(__dirname)));
 

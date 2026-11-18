@@ -2,7 +2,9 @@
   "hosting": {
     "public": "dist",
     "trailingSlash": true,
-    "predeploy": ["npm run build"],
+    "predeploy": [
+      "npm run build"
+    ],
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -20,6 +22,48 @@
       {
         "source": "**",
         "destination": "/index.html"
+      }
+    ],
+    "redirects": [
+      {
+        "source": "/product{,/}",
+        "destination": "/products/",
+        "type": 301
+      },
+      {
+        "source": "/our-products{,/}",
+        "destination": "/products/",
+        "type": 301
+      },
+      {
+        "source": "/about{,/}",
+        "destination": "/our-story/",
+        "type": 301
+      },
+      {
+        "source": "/about-us{,/}",
+        "destination": "/our-story/",
+        "type": 301
+      },
+      {
+        "source": "/story{,/}",
+        "destination": "/our-story/",
+        "type": 301
+      },
+      {
+        "source": "/upcoming{,/}",
+        "destination": "/whats-next/",
+        "type": 301
+      },
+      {
+        "source": "/roadmap{,/}",
+        "destination": "/whats-next/",
+        "type": 301
+      },
+      {
+        "source": "/contact-us{,/}",
+        "destination": "/contact/",
+        "type": 301
       }
     ]
   }

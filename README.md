@@ -28,6 +28,8 @@ Five pages share one header and footer. Each lives in its own folder so URLs sta
 | `/our-story/` | `our-story/index.html` | Industrial automation → home automation → Neural Genesis |
 | `/contact/` | `contact/index.html` | Email, registered office. `?interest=RoutePulse` pre-fills the email subject |
 
+**Short URLs:** `/product`, `/our-products`, `/about`, `/about-us`, `/story`, `/upcoming`, `/roadmap` and `/contact-us` redirect (301) to the real page. The list is in two places that must match: `PAGE_ALIASES` in `server.js` and `redirects` in `firebase.json`. Any other unknown URL still shows the home page.
+
 **Header and footer:** edit `partials/header.html` or `partials/footer.html`, then run `npm run layout`. It copies them into every page between the `@header` / `@footer` markers and marks the current page's links (`aria-current="page"`, from `<body data-page>`). `npm run build` runs it first.
 
 **Store links:** HRDeeds is on the [App Store](https://apps.apple.com/in/app/hrdeeds/id6831963812) and [Google Play](https://play.google.com/store/apps/details?id=com.hrdeeds.mobile); RoutePulse is on the [App Store](https://apps.apple.com/in/app/hrd-routepulse/id6831964568). RoutePulse's Google Play listing (`com.hrdeeds.routepulse`) isn't public yet, so its Play button shows "Coming soon"; when it goes live, replace that `span.store-button.is-soon` with a link on the Home and Products pages.
