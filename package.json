@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "build": "node build-static.cjs",
+    "layout": "node layout.cjs",
     "start": "node server.js",
     "dev": "node --watch server.js"
   },

@@ -27,6 +27,7 @@
   });
 
   const home = document.querySelector('[data-home-scene]');
+  if (!home) return;
   const homeLabels = { evening: 'Evening lights', away: 'Away · lights off', night: 'Good night · soft lighting' };
   home.querySelectorAll('[data-home-mode]').forEach(button => button.addEventListener('click', () => {
     home.dataset.homeScene = button.dataset.homeMode;
